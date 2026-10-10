@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff8f1" />
+    <title>Écrire un article — Atelier</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="composer">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Atelier, accueil">
+        <span class="brand-mark" aria-hidden="true">a.</span>
+        <span>atelier</span>
+      </a>
+      <nav class="header-nav" aria-label="Menu principal">
+        <a class="nav-link" href="articles.html">Articles</a>
+        <a class="nav-link" href="index.html">Mon espace</a>
+      </nav>
+    </header>
+
+    <main class="composer-layout">
+      <a class="back-link" href="articles.html">← Tous les articles</a>
+      <section class="composer-card">
+        <div class="form-heading">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Rédaction <span id="composer-name"></span></p>
+          <h1>Écrire un article<span class="accent-dot">.</span></h1>
+          <p>Rédigez votre article puis choisissez de le publier maintenant ou de le garder en brouillon.</p>
+        </div>
+        <form id="composer-form" class="article-form">
+          <label for="article-title">Titre</label>
+          <input id="article-title" name="titre" type="text" maxlength="160" placeholder="Le titre de votre article" required />
+          <label for="article-content">Article</label>
+          <textarea id="article-content" name="article" rows="12" placeholder="Commencez à écrire…" required></textarea>
+          <label for="article-publish">Publication</label>
+          <select id="article-publish" name="publier">
+            <option value="true">Publier maintenant</option>
+            <option value="false">Enregistrer en brouillon</option>
+          </select>
+          <p class="form-message" id="article-form-message" role="status" aria-live="polite"></p>
+          <button class="button button-submit" type="submit">Enregistrer l’article <span aria-hidden="true">→</span></button>
+          <p class="composer-note">La date est ajoutée automatiquement à l’enregistrement.</p>
+        </form>
+        <section id="author-denied" class="access-denied" hidden>
+          <span class="empty-icon" aria-hidden="true">◈</span>
+          <h2>Accès auteur requis</h2>
+          <p><span id="author-denied-name"></span>, votre compte est connecté mais ne possède pas l’autorisation auteur. Seuls les comptes avec <strong>auteur = true</strong> peuvent ajouter un article.</p>
+          <a class="button button-small button-quiet" href="articles.html">Retour aux articles</a>
+        </section>
+      </section>
+    </main>
+    <footer class="site-footer"><span>© 2026 atelier</span><span>Un espace qui vous ressemble.</span></footer>
+  </body>
+</html>
