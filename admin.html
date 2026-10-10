@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff8f1" />
+    <title>Administration — Atelier</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="admin">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Atelier, accueil">
+        <span class="brand-mark" aria-hidden="true">a.</span>
+        <span>atelier</span>
+      </a>
+      <nav class="header-nav" aria-label="Menu principal">
+        <a class="nav-link" href="index.html">Mon espace</a>
+        <a class="nav-link" href="articles.html">Articles</a>
+        <a class="nav-link" href="ecrire.html">Écrire un article</a>
+        <a class="nav-link" id="admin-link" href="admin.html" hidden>Administration</a>
+        <span class="user-chip"><span class="user-dot" aria-hidden="true"></span><span id="user-name">Visiteur</span></span>
+        <a class="nav-link" id="session-link" href="login.html">Se connecter</a>
+      </nav>
+    </header>
+
+    <main class="admin-layout">
+      <section id="admin-denied" class="access-denied" hidden>
+        <span class="empty-icon" aria-hidden="true">◈</span>
+        <h2>Accès administrateur requis</h2>
+        <p>Connectez-vous avec un compte administrateur pour gérer les utilisateurs et les articles.</p>
+        <a class="button button-small button-quiet" href="login.html">Se connecter</a>
+      </section>
+
+      <div id="admin-content" hidden>
+        <section class="articles-heading">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Espace de gestion</p>
+          <h1>Administration<span class="accent-dot">.</span></h1>
+          <p>Gérez les comptes et modérez les articles de l’atelier.</p>
+        </section>
+
+        <section class="admin-section" aria-labelledby="users-heading">
+          <div class="admin-section-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Membres</p>
+              <h2 id="users-heading">Utilisateurs</h2>
+            </div>
+            <span class="admin-caption">Auteur : écrire · Admin : écrire, gérer les comptes et modérer les publications.</span>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table admin-user-table">
+              <thead><tr><th>Nom</th><th>Adresse e-mail</th><th>Rôle</th><th>Actions</th></tr></thead>
+              <tbody id="admin-user-list"></tbody>
+            </table>
+          </div>
+          <p id="admin-user-empty" class="admin-empty" hidden>Aucun utilisateur.</p>
+        </section>
+
+        <section class="admin-section" aria-labelledby="articles-heading">
+          <div class="admin-section-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Modération</p>
+              <h2 id="articles-heading">Articles</h2>
+            </div>
+            <a class="button button-small" href="articles.html">Voir le journal <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Titre</th><th>Auteur</th><th>Statut</th><th>Actions</th></tr></thead>
+              <tbody id="admin-article-list"></tbody>
+            </table>
+          </div>
+          <p id="admin-article-empty" class="admin-empty" hidden>Aucun article à gérer.</p>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer"><span>© 2026 atelier</span><span>Administration de l’atelier</span></footer>
+  </body>
+</html>

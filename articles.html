@@ -17,6 +17,7 @@
       <nav class="header-nav" aria-label="Menu principal">
         <a class="nav-link" href="index.html">Mon espace</a>
         <a class="nav-link" href="ecrire.html">Écrire un article</a>
+        <a class="nav-link" id="admin-link" href="admin.html" hidden>Administration</a>
         <span class="user-chip"><span class="user-dot" aria-hidden="true"></span><span id="user-name">Visiteur</span></span>
         <a class="nav-link" id="session-link" href="login.html">Se connecter</a>
       </nav>
@@ -26,14 +27,14 @@
       <section class="articles-heading">
         <p class="eyebrow"><span class="eyebrow-dot"></span> Le journal de l’atelier</p>
         <h1>Les articles<span class="accent-dot">.</span></h1>
-        <p>Retrouvez les articles, classés du plus récent au plus ancien.</p>
+        <p>Retrouvez les articles publiés, classés du plus récent au plus ancien.</p>
         <a class="button button-small" href="ecrire.html">Écrire un article <span aria-hidden="true">→</span></a>
       </section>
-      <section id="article-list" class="article-list" aria-label="Tous les articles"></section>
+      <section id="article-list" class="article-list" aria-label="Articles publiés"></section>
       <section id="article-empty" class="empty-state" hidden>
         <span class="empty-icon" aria-hidden="true">✦</span>
-        <h2>Aucun article pour le moment</h2>
-        <p>Les prochains articles apparaîtront ici, du plus récent au plus ancien.</p>
+        <h2>Aucun article publié pour le moment</h2>
+        <p>Les articles publiés apparaîtront ici, du plus récent au plus ancien.</p>
       </section>
     </main>
     <footer class="site-footer"><span>© 2026 atelier</span><span>Le journal de l’atelier</span></footer>
