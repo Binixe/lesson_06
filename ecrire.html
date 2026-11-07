@@ -45,7 +45,9 @@
         <section id="author-denied" class="access-denied" hidden>
           <span class="empty-icon" aria-hidden="true">◈</span>
           <h2>Accès auteur requis</h2>
-          <p><span id="author-denied-name"></span>, votre compte est connecté mais ne possède pas l’autorisation auteur. Seuls les comptes avec <strong>auteur = true</strong> peuvent ajouter un article.</p>
+          <p><span id="author-denied-name"></span>, votre compte ne possède pas encore l’autorisation d’écrire. Vous pouvez envoyer une demande à l’administrateur.</p>
+          <button id="author-request-button" class="button button-small" type="button">Demander le droit d’écriture</button>
+          <p id="author-request-status" class="form-message" role="status" aria-live="polite"></p>
           <a class="button button-small button-quiet" href="articles.html">Retour aux articles</a>
         </section>
       </section>

@@ -19,6 +19,16 @@
         <a class="nav-link" href="articles.html">Articles</a>
         <a class="nav-link" href="ecrire.html">Écrire un article</a>
         <a class="nav-link" id="admin-link" href="admin.html" hidden>Administration</a>
+        <div class="admin-notifications" id="admin-notifications" hidden>
+          <button class="notification-toggle" id="notifications-toggle" type="button" aria-label="Notifications" aria-expanded="false" aria-controls="notifications-panel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg>
+            <span class="notification-count" id="notification-count" hidden></span>
+          </button>
+          <section class="notification-panel" id="notifications-panel" aria-label="Notifications" hidden>
+            <div class="notification-panel-heading"><h2>Notifications</h2></div>
+            <ul class="notification-list" id="notification-list"></ul>
+          </section>
+        </div>
         <span class="user-chip"><span class="user-dot" aria-hidden="true"></span><span id="user-name">Visiteur</span></span>
         <a class="nav-link" id="session-link" href="login.html">Se connecter</a>
       </nav>

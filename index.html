@@ -24,10 +24,27 @@
 
     <main class="welcome-layout">
       <section class="welcome-card" aria-labelledby="welcome-title">
-        <div class="success-icon" aria-hidden="true"><span>✓</span></div>
+        <div class="profile-avatar" id="profile-avatar">
+          <img id="profile-photo" alt="" hidden />
+          <span id="profile-initials" aria-hidden="true"></span>
+        </div>
         <p class="eyebrow"><span class="eyebrow-dot"></span> <span id="session-status">Votre session est active</span></p>
         <h1 id="welcome-title">Vous êtes connecté<span class="accent-dot">.</span></h1>
         <p class="welcome-copy" id="welcome-copy">Bienvenue dans votre espace personnel. Tout est prêt, vous pouvez profiter de votre session.</p>
+        <form id="profile-form" class="article-form profile-form" hidden>
+          <h2>Mon profil</h2>
+          <label for="profile-name">Nom affiché</label>
+          <input id="profile-name" name="name" type="text" maxlength="80" required />
+          <label for="profile-biography">Biographie</label>
+          <textarea id="profile-biography" name="biography" rows="4" maxlength="500" placeholder="Quelques mots sur vous"></textarea>
+          <label for="profile-photo-input">Photo de profil</label>
+          <input id="profile-photo-input" name="photo" type="file" accept="image/jpeg,image/png,image/webp" />
+          <p class="form-message" id="profile-message" role="status" aria-live="polite"></p>
+          <div class="profile-form-actions">
+            <button class="button button-small" type="submit">Enregistrer</button>
+            <button class="button button-small button-quiet" id="profile-remove-photo" type="button" hidden>Retirer la photo</button>
+          </div>
+        </form>
         <button class="button button-logout welcome-action" id="logout-button" type="button">Se déconnecter <span aria-hidden="true">⎋</span></button>
         <div class="welcome-divider"></div>
         <p class="welcome-footnote"><span aria-hidden="true">✦</span> Ravi de vous retrouver ici.</p>
